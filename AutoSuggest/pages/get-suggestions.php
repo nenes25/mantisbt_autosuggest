@@ -1,12 +1,6 @@
 <?php
-
-/**
- * AutoSuggest Ajax Page
- *
- * @author Europe-internet <dev@europe-internet.net>
- * @version 0.1 | $Revision$
- * Last-Modified : $Date$
- * Id : $Id$
+/*
+  Plugin AutoSuggest pour Mantis BugTracker :
  */
 require_once( dirname(__FILE__) . '/../../../core.php' );
 
@@ -19,10 +13,9 @@ $t_user_table = db_get_table('mantis_user_table');
 
 $results = array();
 
-
-# Les requêtes sont génériques car le filtrage est fait via le plugin jquery autoSuggest
 switch ($t_action) {
 
+    #Suggestion des bugs
     case 'bugs':
         $t_sql = "SELECT id,CONCAT (id ,'-',summary ) as label
                   FROM " . $t_bug_table . "
@@ -39,6 +32,7 @@ switch ($t_action) {
         
         break;
 
+    #Suggestion des utilisateurs    
     case 'users':
         $t_sql = "SELECT username as field
                   FROM " . $t_user_table .
