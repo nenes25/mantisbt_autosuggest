@@ -1,4 +1,5 @@
 <?php
+
 /*
   Plugin AutoSuggest pour Mantis BugTracker :
  */
@@ -19,17 +20,20 @@ switch ($t_action) {
     case 'bugs':
         $t_sql = "SELECT id,CONCAT (id ,'-',summary ) as label
                   FROM " . $t_bug_table . "
-                  WHERE project_id = " . $t_project_id." AND (
-                   id LIKE '".$t_search."%'
-                   OR summary LIKE '".$t_search."%'    
-                  )";        
-         $t_results = db_query($t_sql);
+                  WHERE ";
+        if ($t_project_id != 0)
+            $t_sql .="project_id = " . $t_project_id . " AND ";
+        $t_sql .= "(
+                   id LIKE '" . $t_search . "%'
+                   OR summary LIKE '" . $t_search . "%'    
+                  )";
+        $t_results = db_query($t_sql);
 
         #Parcours des résultats
         while ($t_result = db_fetch_array($t_results)) {
-            $results[] = array('label' => $t_result['label'],'value' => $t_result['id']);
+            $results[] = array('label' => $t_result['label'], 'value' => $t_result['id']);
         }
-        
+
         break;
 
     #Suggestion des utilisateurs    
