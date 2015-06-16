@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<phpunit>
+	<php>
+		<env name="WEBSITE_URL" value="http://web.h-hennes.fr/mantis/mantisfile/" />
+		<env name="MANTIS_ADMIN_USER" value="administrator" />
+		<env name="MANTIS_ADMIN_PASSWORD" value="root" />
+	</php>
+</phpunit>
