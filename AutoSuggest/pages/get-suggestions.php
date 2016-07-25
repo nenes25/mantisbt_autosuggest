@@ -1,8 +1,24 @@
 <?php
+# MantisBT - A PHP based bugtracking system
+# MantisBT is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 2 of the License, or
+# (at your option) any later version.
+#
+# MantisBT is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with MantisBT.  If not, see <http://www.gnu.org/licenses/>.
 
-/*
-  Plugin AutoSuggest pour Mantis BugTracker :
- */
+#
+#  AutoSuggest Plugin for Mantis BugTracker :
+#  © Hennes Hervé <contact@h-hennes.fr>
+#    2015-2016
+#  http://www.h-hennes.fr/blog/
+
 require_once( dirname(__FILE__) . '/../../../core.php' );
 
 $t_action = gpc_get('action');
@@ -16,7 +32,7 @@ $results = array();
 
 switch ($t_action) {
 
-    #Suggestion des bugs
+    #Bug suggestions
     case 'bugs':
         $t_sql = "SELECT id,CONCAT (id ,'-',summary ) as label
                   FROM " . $t_bug_table . "
@@ -29,14 +45,13 @@ switch ($t_action) {
                   )";
         $t_results = db_query($t_sql);
 
-        #Parcours des résultats
         while ($t_result = db_fetch_array($t_results)) {
             $results[] = array('label' => $t_result['label'], 'value' => $t_result['id']);
         }
 
         break;
 
-    #Suggestion des utilisateurs    
+    #Users suggestions    
     case 'users':
         $t_sql = "SELECT username as field
                   FROM " . $t_user_table .
@@ -44,7 +59,6 @@ switch ($t_action) {
 
         $t_results = db_query($t_sql);
 
-        #Parcours des résultats
         while ($t_result = db_fetch_array($t_results)) {
             $results[] = array('value' => $t_result['field']);
         }
@@ -55,6 +69,6 @@ switch ($t_action) {
         return json_encode(array());
 }
 
-#renvoi des résultats au format json
+#display results in json format
 echo json_encode($results);
 ?>
