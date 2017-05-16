@@ -1,8 +1,9 @@
 # mantisbt_autosuggest
 
-Plugin for mantis bug tracker 1.3.x
+Plugin for mantis bug tracker 2.2.x and > 
 
 A version for mantis bug tracker 1.2.x is avalaible on the branch 1.2.x
+A version for mantis bug tracker 1.3.x is avalaible on the branch 1.3.x
 
 ## EN
 Plugin AutoSuggest for mantis bugtracker.
@@ -21,7 +22,8 @@ AutoSuggestion des utilisateurs ou des bugs mantis
 
 Pour plus de détails : http://www.h-hennes.fr/blog/2015/04/10/auto-suggestion-mantis-bugtracke-noms-bugs/ (FR)
 
-Ce plugin est compatible avec mantis 1.3.x  
+Ce plugin est compatible avec mantis 2.2.x et supérieur
+Une version compatible avec les versions 1.3.x est disponible sur la branche 1.3.x  
 Une version compatible avec les versions 1.2.x est disponible sur la branche 1.2.x
 
 

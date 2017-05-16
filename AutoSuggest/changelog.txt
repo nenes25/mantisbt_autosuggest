@@ -3,5 +3,6 @@ Plugin Mantis AutoSuggest
 2015-04-10 : Version initiale // Initial version
 2015-04-13 : V 0.1.1
             - Correction recherche dans tous les projets // Search correction in all projects
-			- Dépendance du module jquery pour mantis // Depends from mantis jquery module
+	    - Dépendance du module jquery pour mantis // Depends from mantis jquery module
 2016-07-25 : V 0.1.2 : Maj pour mantis 1.3 // Upgrade for Mantis 1.3
+2017-05-16 : V 0.1.3 : Maj pour mantis 2.2.x // Upgrade for Mantis 2.2.x

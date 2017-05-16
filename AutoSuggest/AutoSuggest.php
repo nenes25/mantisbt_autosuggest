@@ -16,7 +16,7 @@
 #
 #  AutoSuggest Plugin for Mantis BugTracker :
 #  © Hennes Hervé <contact@h-hennes.fr>
-#    2015-2016
+#    2015-2017
 #  http://www.h-hennes.fr/blog/
 
 class AutoSuggestPlugin extends MantisPlugin {
@@ -26,7 +26,8 @@ class AutoSuggestPlugin extends MantisPlugin {
         $this->description = 'AutoSuggest plugin';
         $this->version = '0.1.3';
         $this->requires = array(
-            'MantisCore' => '1.3.0',
+            'MantisCore' => '2.2',
+            'jQueryUI' => '1.12',
         );
         $this->author = 'Hennes Hervé';
         $this->url = 'http://www.h-hennes.fr/blog/';

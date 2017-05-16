@@ -16,7 +16,7 @@
 #
 #  AutoSuggest Plugin for Mantis BugTracker :
 #  © Hennes Hervé <contact@h-hennes.fr>
-#    2015-2016
+#    2015-2017
 #  http://www.h-hennes.fr/blog/
 */
 
@@ -34,9 +34,9 @@ jQuery(function($) {
                 },
                 success: function(data) {
                     response(data);
-                },
+                }
             });
-        },
+        }
     });
 
     //Users monitoring this issue
@@ -51,9 +51,9 @@ jQuery(function($) {
                 },
                 success: function(data) {
                     response(data);
-                },
+                }
             });
-        },
+        }
     });
 });
 
