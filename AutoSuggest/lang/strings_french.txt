@@ -1,0 +1,4 @@
+<?php
+$s_plugin_autosuggest_title = 'AutoSuggestPlugin';
+$s_plugin_autosuggest_description = 'Ajoute une suggestion automatique sur le champ des relations des bugs, et des noms d\'utilisateurs.';
+?>

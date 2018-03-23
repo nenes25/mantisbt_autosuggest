@@ -16,12 +16,12 @@
 #
 #  AutoSuggest Plugin for Mantis BugTracker :
 #  © Hennes Hervé <contact@h-hennes.fr>
-#    2015-2017
+#    2015-2018
 #  http://www.h-hennes.fr/blog/
 */
 
 jQuery(function($) {
-
+	
     //Bug relationships ( My view page + Top right corner )
     $("input[name='dest_bug_id'], input[name='bug_id']").autocomplete({
         source: function(request, response) {

@@ -16,7 +16,7 @@
 #
 #  AutoSuggest Plugin for Mantis BugTracker :
 #  © Hennes Hervé <contact@h-hennes.fr>
-#    2015-2017
+#    2015-2018
 #  http://www.h-hennes.fr/blog/
 
 require_once( dirname(__FILE__) . '/../../../core.php' );
