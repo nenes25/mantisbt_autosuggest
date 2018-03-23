@@ -34,7 +34,7 @@ switch ($t_action) {
 
     #Bug suggestions
     case 'bugs':
-        $t_sql = "SELECT id,CONCAT (id ,'-',summary ) as label
+        $t_sql = "SELECT id,CONCAT (id ,':',summary ) as label
                   FROM " . $t_bug_table . "
                   WHERE ";
         if ($t_project_id != 0)
@@ -55,7 +55,8 @@ switch ($t_action) {
     case 'users':
         $t_sql = "SELECT username as field
                   FROM " . $t_user_table .
-                " WHERE username LIKE '" . $t_search . "%'";
+                " WHERE username LIKE '" . $t_search . "%'
+				  AND enabled=1";
 
         $t_results = db_query($t_sql);
 
