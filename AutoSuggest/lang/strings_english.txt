@@ -1,4 +1,3 @@
 <?php
-$s_plugin_autosuggest_title = 'AutoSuggestPlugin';
-$s_plugin_autosuggest_description = 'No more need to remember issue number or full user names, this module suggest the value based on their names';
-?>
+$s_plugin_AutoSuggest_title = 'AutoSuggestPlugin';
+$s_plugin_AutoSuggest_description = 'No more need to remember issue number or full user names, this module suggest the value based on their names';

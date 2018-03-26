@@ -2,23 +2,28 @@
 
 Plugin for mantis bug tracker 2.2.x and > 
 
-A version for mantis bug tracker 1.2.x is avalaible on the branch 1.2.x
-A version for mantis bug tracker 1.3.x is avalaible on the branch 1.3.x
+A version for mantis bug tracker 1.2.x is avalaible on the branch 1.2.x  
+A version for mantis bug tracker 1.3.x is avalaible on the branch 1.3.x  
 
 ## EN
 Plugin AutoSuggest for mantis bugtracker.
+This plugin add automatique suggestions on the bug view detail page
 
 This module give you bug number depending of their name :
 
-<img src="http://www.h-hennes.fr/blog/wp-content/uploads/2015/04/mantisbt_autosuggest_bug.jpg" alt="Suggest Bugs">
+<img src="https://www.h-hennes.fr/blog/wp-content/uploads/2018/03/autosuggest-bug.png" alt="Suggest Bugs">
 
 Or suggest user name :
 
-<img src="http://www.h-hennes.fr/blog/wp-content/uploads/2015/04/mantisbt_autosuggest.jpg" alt="Suggest Bugs">
+<img src="https://www.h-hennes.fr/blog/wp-content/uploads/2018/03/autosuggest-customer.png" alt="Suggest Bugs">
 
 
 ## FR
-AutoSuggestion des utilisateurs ou des bugs mantis
+AutoSuggestion des utilisateurs ou des bogues mantis.
+
+Ce plugin ajoute une suggestion automatique sur la page de détail d'un bogue :  
+- des utilisateurs sur le block "liste des utilisateurs surveillant ce bogue"
+- des autres bogues sur le champ "Relations"
 
 Pour plus de détails : http://www.h-hennes.fr/blog/2015/04/10/auto-suggestion-mantis-bugtracke-noms-bugs/ (FR)
 
