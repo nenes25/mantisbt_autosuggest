@@ -7,7 +7,10 @@ A version for mantis bug tracker 1.3.x is avalaible on the branch 1.3.x
 
 ## EN
 Plugin AutoSuggest for mantis bugtracker.
-This plugin add automatique suggestions on the bug view detail page
+
+This plugin add automatic suggestions on the bug view detail page  
+- users on block "Users monitoring this issue "
+- other bugs on block "relationships"
 
 This module give you bug number depending of their name :
 
