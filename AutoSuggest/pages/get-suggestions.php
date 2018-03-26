@@ -34,7 +34,7 @@ switch ($t_action) {
 
     #Bug suggestions
     case 'bugs':
-        $t_sql = "SELECT id,CONCAT (id ,':',summary ) as label
+        $t_sql = "SELECT id,summary
                   FROM " . $t_bug_table . "
                   WHERE ";
         if ($t_project_id != 0)
@@ -46,7 +46,10 @@ switch ($t_action) {
         $t_results = db_query($t_sql);
 
         while ($t_result = db_fetch_array($t_results)) {
-            $results[] = array('label' => $t_result['label'], 'value' => $t_result['id']);
+            $results[] = array(
+                'label' => bug_format_id($t_result['id']).' : '.$t_result['summary'],
+                'value' => $t_result['id']
+            );
         }
 
         break;
