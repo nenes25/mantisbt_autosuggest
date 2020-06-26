@@ -24,7 +24,7 @@ class AutoSuggestPlugin extends MantisPlugin {
     function register() {
         $this->name = plugin_lang_get('title');
         $this->description = plugin_lang_get( 'description');
-        $this->version = '0.1.4';
+        $this->version = '0.1.5';
         $this->requires = array(
             'MantisCore' => '2.2',
             'jQueryUI' => '1.12',

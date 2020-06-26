@@ -16,16 +16,19 @@
 #
 #  AutoSuggest Plugin for Mantis BugTracker :
 #  © Hennes Hervé <contact@h-hennes.fr>
-#    2015-2018
+#    2015-2020
 #  http://www.h-hennes.fr/blog/
 
-require_once( dirname(__FILE__) . '/../../../core.php' );
-
+#Basic restriction : non authentificated users cannot see suggestions
+if ( current_user_is_anonymous()){
+    return json_encode(array());
+}
 $t_action = gpc_get('action');
 $t_search = gpc_get('search');
 $t_project_id = helper_get_current_project();
 
 $t_bug_table = db_get_table('mantis_bug_table');
+$t_project_user_table = db_get_table('mantis_project_user_list_table');
 $t_user_table = db_get_table('mantis_user_table');
 
 $results = array();
@@ -57,9 +60,10 @@ switch ($t_action) {
     #Users suggestions    
     case 'users':
         $t_sql = "SELECT username as field
-                  FROM " . $t_user_table .
-                " WHERE username LIKE '" . $t_search . "%'
-				  AND enabled=1";
+                  FROM " . $t_user_table ." u
+                  INNER JOIN ".$t_project_user_table. " p ON ( p.user_id = u.id AND p.project_id = ".$t_project_id.")
+                  WHERE u.username LIKE '" . $t_search . "%'
+				  AND u.enabled=1";
 
         $t_results = db_query($t_sql);
 
