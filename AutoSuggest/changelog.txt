@@ -7,3 +7,4 @@ Plugin Mantis AutoSuggest
 2016-07-25 : V 0.1.2 : Maj pour mantis 1.3 // Upgrade for Mantis 1.3
 2017-05-16 : V 0.1.3 : Maj pour mantis 2.2.x // Upgrade for Mantis 2.2.x
 2018-03-23 : V 0.1.4 : Module improvments
+2020-11-04 : V 0.1.5 : Improve bug suggestion

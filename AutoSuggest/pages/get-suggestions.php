@@ -44,7 +44,7 @@ switch ($t_action) {
             $t_sql .="project_id = " . $t_project_id . " AND ";
         $t_sql .= "(
                    id LIKE '" . $t_search . "%'
-                   OR summary LIKE '" . $t_search . "%'    
+                   OR summary LIKE '%" . $t_search . "%'    
                   )";
         $t_results = db_query($t_sql);
 
